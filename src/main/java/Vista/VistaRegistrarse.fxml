@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.ControladorRegistrarse">
+   <children>
+      <!-- Fondo de la ventana -->
+      <ImageView id="fondo" fx:id="fondo" fitHeight="718.0" fitWidth="700.0" layoutX="-49.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/fondo.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00f0ff" height="80.0" layoutX="108.0" layoutY="591.0" stroke="#f42682" strokeType="INSIDE" strokeWidth="3.0" width="447.0" />
+
+      <!-- Logo Restaurante -->
+      <ImageView fitHeight="135.0" fitWidth="130.0" layoutX="48.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/LogoRestaurante.png" />
+         </image>
+      </ImageView>
+
+      <!-- Nombre Restaurante -->
+      <ImageView fitHeight="120.0" fitWidth="462.0" layoutX="185.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/nombreRestaurante.png" />
+         </image>
+      </ImageView>
+
+      <!-- Separador de título y área de inicio de sesión -->
+      <Separator layoutX="55.0" layoutY="174.0" prefHeight="6.0" prefWidth="539.0" style="-fx-background-color: #F42682;" />
+
+      <!-- Imagen de iniciar sesión -->
+      <ImageView fitHeight="101.0" fitWidth="395.0" layoutX="177.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/registrarse.png" />
+         </image>
+      </ImageView>
+
+      <!-- Imagen de Volver -->
+      <ImageView fx:id="volver" fitHeight="56.0" fitWidth="106.0" layoutX="60.0" layoutY="189.0" onMouseClicked="#volverAInicio" onMouseEntered="#agrandarImagen" onMouseExited="#restaurarImagen" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/bordesVolver.jpg" />
+         </image>
+      </ImageView>
+
+      <!-- Área de formulario -->
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00f0ff" height="282.0" layoutX="82.0" layoutY="245.0" stroke="#f42682" strokeType="INSIDE" strokeWidth="3.0" width="498.0" />
+
+      <!-- Botón de Iniciar Sesión -->
+      <Button fx:id="botonRegistrarse" layoutX="110.0" layoutY="540.0" mnemonicParsing="false" onAction="#registrarse" onMouseEntered="#agrandarBoton" onMouseExited="#reducirBoton" style="-fx-background-color: #00f0ff; -fx-border-color: #f42682; -fx-border-width: 3;" text="Registrarse" />
+
+      <!-- Texto de no cuenta -->
+      <Label layoutX="475.0" layoutY="533.0" prefHeight="31.0" prefWidth="130.0" text="¿Ya tienes cuenta?" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="iniciarSesion" layoutX="509.0" layoutY="556.0" onMouseClicked="#irAIniciarSesion" onMouseEntered="#agrandarLabelIniciarSesion" onMouseExited="#restaurarLabelIniciarSesion" prefHeight="31.0" prefWidth="91.0" text="Iniciar sesión" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="emailField" layoutX="353.0" layoutY="425.0" prefHeight="26.0" prefWidth="175.0" />
+      <TextField fx:id="contrasenaField" layoutX="353.0" layoutY="474.0" prefHeight="26.0" prefWidth="175.0" />
+      <TextField fx:id="telefonoField" layoutX="353.0" layoutY="376.0" prefHeight="26.0" prefWidth="175.0" />
+      <TextField fx:id="apellidosField" layoutX="353.0" layoutY="323.0" prefHeight="26.0" prefWidth="175.0" />
+      <TextField fx:id="nombreField" layoutX="353.0" layoutY="269.0" prefHeight="26.0" prefWidth="175.0" />
+      <Label layoutX="173.0" layoutY="268.0" text="NOMBRE:">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="166.0" layoutY="375.0" text="TELÉFONO:">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="165.0" layoutY="322.0" text="APELLIDOS:">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="151.0" layoutY="473.0" text="CONTRASEÑA:">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="185.0" layoutY="424.0" text="EMAIL:">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="adminField" layoutX="353.0" layoutY="605.0" prefHeight="26.0" prefWidth="175.0" />
+      <Label layoutX="131.0" layoutY="604.0" text="CONTRASEÑA Admin:">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="145.0" layoutY="638.0" text="(Rellenar exclusivamente si es un nuevo miembro de nuestro personal)">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+
+   </children>
+</AnchorPane>

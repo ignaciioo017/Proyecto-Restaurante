@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.ControladorInicioSesion">
+   <children>
+      <!-- Fondo de la ventana -->
+      <ImageView id="fondo" fx:id="fondo" fitHeight="722.0" fitWidth="672.0" layoutX="-35.0" layoutY="-50.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/fondo.jpg" />
+         </image>
+      </ImageView>
+
+      <!-- Logo Restaurante -->
+      <ImageView fitHeight="135.0" fitWidth="130.0" layoutX="48.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/LogoRestaurante.png" />
+         </image>
+      </ImageView>
+
+      <!-- Nombre Restaurante -->
+      <ImageView fitHeight="120.0" fitWidth="462.0" layoutX="185.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/nombreRestaurante.png" />
+         </image>
+      </ImageView>
+
+      <!-- Separador de título y área de inicio de sesión -->
+      <Separator layoutX="55.0" layoutY="174.0" prefHeight="6.0" prefWidth="539.0" style="-fx-background-color: #F42682;" />
+
+      <!-- Imagen de iniciar sesión -->
+      <ImageView fitHeight="101.0" fitWidth="395.0" layoutX="177.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/iniciarSesion.png" />
+         </image>
+      </ImageView>
+
+      <!-- Imagen de Volver -->
+      <ImageView fx:id="volver" fitHeight="56.0" fitWidth="106.0" layoutX="60.0" layoutY="189.0" onMouseClicked="#volverAInicio" onMouseEntered="#agrandarImagen" onMouseExited="#restaurarImagen" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/bordesVolver.jpg" />
+         </image>
+      </ImageView>
+
+      <!-- Área de formulario -->
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00f0ff" height="184.0" layoutX="113.0" layoutY="277.0" stroke="#f42682" strokeType="INSIDE" strokeWidth="3.0" width="423.0" />
+
+      <!-- Etiquetas y campos de entrada -->
+      <Label id="usuario" layoutX="165.0" layoutY="298.0" prefHeight="27.0" prefWidth="81.0" text="USUARIO:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField id="usuarioBD" fx:id="usuarioField" layoutX="301.0" layoutY="299.0" />
+
+      <Label id="contrasena" layoutX="165.0" layoutY="353.0" text="CONTRASEÑA:">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="contrasenaField" layoutX="300.0" layoutY="353.0" />
+
+      <Label layoutX="165.0" layoutY="409.0" text="TIPO">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="tipoComboBox" layoutX="301.0" layoutY="412.0" prefWidth="150.0" />
+
+      <!-- Separadores para dividir campos -->
+      <Separator layoutX="225.0" layoutY="338.0" prefWidth="200.0" style="-fx-background-color: #F42682;" />
+      <Separator layoutX="225.0" layoutY="394.0" prefWidth="200.0" style="-fx-background-color: #F42682;" />
+
+      <!-- Botón de Iniciar Sesión -->
+      <Button fx:id="botonIniciarSesion" layoutX="113.0" layoutY="488.0" mnemonicParsing="false" onAction="#iniciarSesion" onMouseEntered="#agrandarBoton" onMouseExited="#reducirBoton" style="-fx-background-color: #00f0ff; -fx-border-color: #f42682; -fx-border-width: 3;" text="INICIAR SESION" />
+
+      <!-- Texto de no cuenta -->
+      <Label layoutX="408.0" layoutY="488.0" prefHeight="31.0" prefWidth="130.0" text="¿No tienes cuenta?" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+
+      <!-- Enlace a registrarse -->
+      <Label fx:id="Registrarse" layoutX="462.0" layoutY="519.0" onMouseClicked="#irARegistrarse" onMouseEntered="#agrandarLabelRegistrarse" onMouseExited="#restaurarLabelRegistrarse" text="Registrarse" textFill="WHITE">
+   			<font>
+    		  <Font size="15.0" />
+   			</font>
+	   </Label>
+   </children>
+</AnchorPane>

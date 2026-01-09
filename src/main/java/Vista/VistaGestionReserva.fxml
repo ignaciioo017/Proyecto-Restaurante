@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+
+
+<AnchorPane prefHeight="427.0" prefWidth="350.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/22" fx:controller="Controladores.ControladorGestionReservas">
+   <children>
+      
+      <!-- Fondo -->
+      <ImageView fitHeight="428.0" fitWidth="428.0" layoutX="-7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/fondo.jpg" />
+         </image>
+      </ImageView>
+      
+      <!-- Logo Restaurante -->
+      <ImageView fitHeight="57.0" fitWidth="54.0" layoutX="345.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/LogoRestaurante.png" />
+         </image>
+      </ImageView>
+      
+     
+      <ImageView fitHeight="17.0" fitWidth="198.0" layoutX="153.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/cooltext468871155345433.png" />
+         </image>
+      </ImageView>
+     
+     <!-- Botones Confirmar y Anular  -->
+      <Button layoutX="326.0" layoutY="372.0" mnemonicParsing="false" style="-fx-background-color: #00FFFF; -fx-border-color: #F42682; -fx-border-width: 2;" text="Confirmar" />
+      <Button layoutX="255.0" layoutY="372.0" mnemonicParsing="false" style="-fx-border-color: #F42682; -fx-border-width: 2; -fx-background-color: #00FFFF;" text="Anular" />
+     
+     <!-- Tabla -->
+      <TableView layoutX="73.0" layoutY="126.0" prefHeight="225.0" prefWidth="276.0" style="-fx-background-color: #00FFFF;">
+        <columns>
+          <TableColumn prefWidth="59.99994659423828" text="Nombre" />
+          <TableColumn prefWidth="69.60003662109375" text="Telefono" />
+            <TableColumn prefWidth="45.5999755859375" text="Hora" />
+            <TableColumn prefWidth="46.39996337890625" text="Fecha" />
+            <TableColumn prefWidth="51.2000732421875" text="Estado" />
+        </columns>
+      </TableView>
+    
+      <Line endX="37.800010681152344" endY="89.89997100830078" layoutX="6.0" layoutY="-9.0" startX="371.3999938964844" startY="89.89997863769531" stroke="#f42682" strokeWidth="2.0" />
+     
+      <Label layoutX="73.0" layoutY="29.0" prefHeight="18.0" prefWidth="159.0" 
+      style="-fx-border-color: #F42682; -fx-background-color: #00FFFF; -fx-border-width: 2;" text="label" />
+     
+     <!-- Imagen volver -->
+      <ImageView fx:id="volver" fitHeight="30.0" fitWidth="87.0" layoutX="33.0" layoutY="372.0" 
+      pickOnBounds="true" preserveRatio="true" onMouseClicked="#volverAInicio" onMouseEntered="#agrandarImagen" onMouseExited="#restaurarImagen">
+         <image>
+            <Image url="@../imagenes/bordesVolver.jpg" />
+         </image>
+      </ImageView>
+   
+   </children>
+</AnchorPane>

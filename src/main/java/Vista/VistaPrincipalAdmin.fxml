@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.ControladorPrincipalAdmin">
+   <children>
+
+      <!-- Fondo -->
+      <ImageView fitHeight="611.0" fitWidth="601.0" layoutX="-144.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/imagenes/fondo.jpg" />
+         </image>
+      </ImageView>
+      
+      <!-- Logo del restaurante -->
+      <ImageView fitHeight="112.0" fitWidth="145.0" layoutX="312.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/imagenes/LogoRestaurante.png" />
+         </image>
+      </ImageView>
+      
+      <!-- Imagen: "Reservas" -->
+      <ImageView fitHeight="48.0" fitWidth="143.0" layoutX="282.0" layoutY="167.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/imagenes/cooltext469449887159579.png" />
+         </image>
+      </ImageView>
+      
+      <!-- Imagen: "Menú" -->
+      <ImageView fitHeight="40.0" fitWidth="86.0" layoutX="311.0" layoutY="324.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/imagenes/cooltext469449900351584.png" />
+         </image>
+      </ImageView>
+      
+      <!-- Imagen salir -->
+      <ImageView fx:id="salir" fitHeight="75.0" fitWidth="31.0" layoutX="32.0" layoutY="111.0" onMouseClicked="#cerrarSesion" onMouseEntered="#agrandarImagenSalir" onMouseExited="#restaurarImagenSalir" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/imagenes/salir2.png" />
+         </image>
+      </ImageView>
+      
+      <!-- Imagen: "Pedidos en curso" -->
+      <ImageView fitHeight="30.0" fitWidth="194.0" layoutX="26.0" layoutY="174.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/imagenes/cooltext469450019415357.png" />
+         </image>
+      </ImageView>
+      
+      <!-- Imagen: "Pedidos Finalizados" -->
+      <ImageView fitHeight="37.0" fitWidth="213.0" layoutX="25.0" layoutY="434.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/imagenes/cooltext469450127182198.png" />
+         </image>
+      </ImageView>
+      
+      <!-- Separador principal -->
+      <Separator layoutX="30.0" layoutY="150.0" prefHeight="6.0" prefWidth="398.0" style="-fx-background-color: #F42682;" />
+      
+      <!-- Separador vertical -->
+      <Separator layoutX="246.0" layoutY="156.0" orientation="VERTICAL" prefHeight="373.0" prefWidth="5.0" />
+      
+      <!-- Label nombre administrador -->
+	  <Label fx:id="labelNombreAdministrador" layoutX="31.0" layoutY="60.0" prefHeight="37.0" prefWidth="272.0" style="-fx-background-color: #00FFFF; -fx-border-color: #F42682; -fx-border-width: 2;" text="          ADMINISTRADOR">
+         <font>
+            <Font size="21.0" />
+         </font></Label>
+	   		
+      
+      <!-- Botón de gestión de reservas -->
+      <Button id="btnReservas" fx:id="botonReserva" layoutX="313.0" layoutY="224.0" mnemonicParsing="false" onAction="#vistaGestionReserva" onMouseEntered="#agrandarBotonReserva" onMouseExited="#reducirBotonReserva" style="-fx-background-color: #00FFFF; -fx-border-color: #F42682; -fx-border-width: 2;" text="GESTIONAR" />
+      
+      <!-- Botón de gestión del menú -->
+      <Button id="btnMenu" fx:id="botonMenu" layoutX="314.0" layoutY="377.0" mnemonicParsing="false" onAction="#vistaGestionMenu" onMouseEntered="#agrandarBotonMenu" onMouseExited="#reducirBotonMenu" style="-fx-background-color: #00FFFF; -fx-border-color: #F42682; -fx-border-width: 2;" text="GESTIONAR" />
+      
+      <!-- Botón de gestión de pedidos -->
+      <Button id="btnPedidos" fx:id="botonPedido" layoutX="83.0" layoutY="480.0" mnemonicParsing="false" onAction="#vistaPedidosFinalizados" onMouseEntered="#agrandarBotonPedido" onMouseExited="#reducirBotonPedido" style="-fx-background-color: #00FFFF; -fx-border-color: #F42682; -fx-border-width: 2;" text="GESTIONAR" />
+      
+      <!-- Área pedidos en curso -->
+	<TextArea fx:id="textAreaPedidos" layoutX="33.0" layoutY="215.0" prefHeight="187.0" prefWidth="181.0" style="-fx-opacity: 0.5;" />
+   
+   </children>
+</AnchorPane>

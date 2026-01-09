@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane prefHeight="600.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.ControladorPrincipal">
+   <children>
+      <ImageView fitHeight="614.0" fitWidth="613.0" layoutX="-4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/fondo.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="119.0" fitWidth="400.0" layoutX="132.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/nombreRestaurante.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="81.0" fitWidth="85.0" layoutX="29.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/LogoRestaurante.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="IniciarSesion" fitHeight="38.0" fitWidth="104.0" layoutX="441.0" layoutY="127.0" onMouseClicked="#BotonInicioSesion" onMouseEntered="#agrandarImagenIS" onMouseExited="#restaurarImagenIS" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/iniciarSesion.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Registrarse" fitHeight="60.0" fitWidth="98.0" layoutX="343.0" layoutY="126.0" onMouseClicked="#BotonRegistrarse" onMouseEntered="#agrandarImagenR" onMouseExited="#restaurarImagenR" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/registrarse.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="44.0" layoutY="110.0" prefHeight="10.0" prefWidth="490.0" style="-fx-background-color: #F42682;" />
+      <ImageView fitHeight="74.0" fitWidth="77.0" layoutX="119.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/decoracion.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f42682" height="359.0" layoutX="36.0" layoutY="197.0" stroke="BLACK" strokeType="INSIDE" width="241.0" />
+      <ImageView fitHeight="352.0" fitWidth="241.0" layoutX="39.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/fondocarta.jpg" />
+         </image>
+      </ImageView>
+      <Separator layoutX="287.0" layoutY="184.0" orientation="VERTICAL" prefHeight="388.0" prefWidth="9.0" style="-fx-background-color: #F42682;" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f42682" height="111.0" layoutX="304.0" layoutY="235.0" stroke="#f42682" strokeType="INSIDE" width="155.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f42682" height="119.0" layoutX="304.0" layoutY="369.0" stroke="#f42682" strokeType="INSIDE" width="162.0" />
+      <ImageView fitHeight="100.0" fitWidth="104.0" layoutX="478.0" layoutY="373.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/hamburguesa%20ranchera.png" />
+         </image></ImageView>
+      <ImageView fitHeight="146.0" fitWidth="146.0" layoutX="309.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/cheeseburgerdesc.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="125.0" fitWidth="155.0" layoutX="308.0" layoutY="373.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/burgerdesc.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="104.0" fitWidth="155.0" layoutX="451.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/cheeseburger.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
